@@ -124,8 +124,12 @@ def get_user_input():
     return input("Press Enter to generate the next solution!")
 
 
+def init_queens_row():
+    return [0 for _ in range(8)]
+
+
 def main():
-    queens_row = [0 for _ in range(8)]
+    queens_row = init_queens_row()
     queens_row[0] = 1
 
     queen_place_gen = place_queens_generator(queens_row, 1, 2)
